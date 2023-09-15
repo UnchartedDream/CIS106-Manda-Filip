@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-14 09:58:16 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMTQ7MDk6NTM6NDEgUE07MjkxMw=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMTQ7MDk6NTg6MTYgUE07MjszMDI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="exam1" type="Real" array="False" size=""/>
+            <declare name="exam2" type="Real" array="False" size=""/>
+            <declare name="exam1weight" type="Real" array="False" size=""/>
+            <declare name="exam2weight" type="Real" array="False" size=""/>
+            <declare name="finalgrade" type="Real" array="False" size=""/>
+            <input variable="exam1"/>
+            <input variable="exam2"/>
+            <assign variable="exam1weight" expression="exam1 * .4"/>
+            <assign variable="exam2weight" expression="exam2 *.6"/>
+            <assign variable="finalgrade" expression="exam1weight + exam2weight"/>
+            <output expression="&quot;Your final score is &quot; &amp;finalgrade &amp;&quot; out of 100.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
