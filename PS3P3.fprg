@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 09:33:28 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMTY7MDI6NTI6NDQgUE07MjkxMA=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMTY7MDk6MzM6MjggUE07NTszMDMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="tip15" type="Real" array="False" size=""/>
+            <declare name="tip18" type="Real" array="False" size=""/>
+            <declare name="tip2" type="Real" array="False" size=""/>
+            <declare name="tipcost15" type="Real" array="False" size=""/>
+            <declare name="tipcost18" type="Real" array="False" size=""/>
+            <declare name="tipcost2" type="Real" array="False" size=""/>
+            <input variable="total"/>
+            <assign variable="tip15" expression="1.5"/>
+            <assign variable="tip18" expression="1.8"/>
+            <assign variable="tip2" expression="20"/>
+            <assign variable="tipcost15" expression="total * .15"/>
+            <assign variable="tipcost18" expression="total * .18"/>
+            <assign variable="tipcost2" expression="total * .2"/>
+            <output expression="&quot;With .15 Tip&quot;&#13;&#10;&amp;ToChar(13)&#13;&#10;&amp;ToChar(13) &amp;&quot;Total: &quot; &amp;Total&#13;&#10;&amp;ToChar(13) &amp;&quot;Tip: &quot; &amp;tipcost15&#13;&#10;&amp;ToChar(13) &amp;&quot;Total with Tip: &quot; &amp;(total+tipcost15)" newline="True"/>
+            <output expression="&quot;With .18 Tip&quot;&#13;&#10;&amp;ToChar(13)&#13;&#10;&amp;ToChar(13) &amp;&quot;Total: &quot; &amp;Total&#13;&#10;&amp;ToChar(13) &amp;&quot;Tip: &quot; &amp;tipcost18&#13;&#10;&amp;ToChar(13) &amp;&quot;Total with Tip: &quot; &amp;(total+tipcost18)" newline="True"/>
+            <output expression="&quot;With .2 Tip&quot;&#13;&#10;&amp;ToChar(13)&#13;&#10;&amp;ToChar(13) &amp;&quot;Total: &quot; &amp;Total&#13;&#10;&amp;ToChar(13) &amp;&quot;Tip: &quot; &amp;tipcost2&#13;&#10;&amp;ToChar(13) &amp;&quot;Total with Tip: &quot; &amp;(total+tipcost2)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

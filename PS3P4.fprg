@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 09:39:05 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMTY7MDk6MzM6MzIgUE07MjkxMw=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMTY7MDk6Mzk6MDUgUE07NDszMDMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="firstname" type="String" array="False" size=""/>
+            <declare name="steps" type="Integer" array="False" size=""/>
+            <declare name="calburned" type="Integer" array="False" size=""/>
+            <input variable="firstname"/>
+            <input variable="steps"/>
+            <assign variable="calburned" expression="steps * 25"/>
+            <output expression="&quot;Congradulations &quot; &amp;firstname &#13;&#10;&amp;ToChar(13) &amp;&quot;You burned &quot; &amp;calburned &amp;&quot; today&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

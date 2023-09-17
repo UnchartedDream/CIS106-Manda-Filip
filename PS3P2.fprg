@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-16 02:33:51 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMTY7MDI6Mjg6NTYgUE07MjkxNg=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMTY7MDI6MzM6NTEgUE07MTszMDE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="purchaseprice" type="Real" array="False" size=""/>
+            <declare name="currentprice" type="Real" array="False" size=""/>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="value" type="Real" array="False" size=""/>
+            <input variable="purchaseprice"/>
+            <input variable="currentprice"/>
+            <input variable="qty"/>
+            <assign variable="value" expression="(currentprice - purchaseprice) * qty"/>
+            <output expression="&quot;The value of your stock compared to when you first bought it is &quot; &amp;value &amp;&quot; Dollars.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
