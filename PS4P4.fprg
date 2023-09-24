@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-24 04:33:48 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMjQ7MDM6MTM6MzUgUE07MjkwNw=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMjQ7MDQ6MzM6NDggUE07NjszMDI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NameOfApplicance" type="String" array="False" size=""/>
+            <declare name="CostOfAppliance" type="Real" array="False" size=""/>
+            <declare name="Warranty" type="Real" array="False" size=""/>
+            <declare name="CostOfWarranty" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <input variable="NameOfApplicance"/>
+            <input variable="CostOfAppliance"/>
+            <if expression="CostOfAppliance &gt;1000">
+                <then>
+                    <assign variable="Warranty" expression=".1"/>
+                </then>
+                <else>
+                    <assign variable="Warranty" expression=".05"/>
+                </else>
+            </if>
+            <assign variable="CostOfWarranty" expression="(CostOfAppliance * Warranty)"/>
+            <assign variable="Total" expression="(CostOfAppliance + CostOfWarranty)"/>
+            <output expression="NameOfApplicance &amp;&quot; with a cost of &quot; &amp;CostOfAppliance &amp;&quot; will have a warranty cost of &quot; &amp;CostOfWarranty&#13;&#10;&amp;ToChar(13) &amp;&quot;This will bring your total with warranty to &quot; &amp;Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

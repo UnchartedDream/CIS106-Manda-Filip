@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-21 10:17:13 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMjE7MDc6MDk6NDAgUE07MjkwOQ=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMjE7MTA6MTc6MTMgUE07NjszMDE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="UnitPrice" type="Real" array="False" size=""/>
+            <declare name="ExtendedPrice" type="Real" array="False" size=""/>
+            <declare name="Tax" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <input variable="qty"/>
+            <if expression="qty &lt; 1000">
+                <then>
+                    <assign variable="UnitPrice" expression="5"/>
+                </then>
+                <else>
+                    <assign variable="UnitPrice" expression="3"/>
+                </else>
+            </if>
+            <assign variable="ExtendedPrice" expression="qty * UnitPrice"/>
+            <assign variable="Tax" expression=".07 * ExtendedPrice"/>
+            <assign variable="Total" expression="ExtendedPrice + Tax"/>
+            <output expression="&quot;If you buy &quot; &amp;qty &amp;&quot; your unity price will be &quot; &amp;UnitPrice &amp;&quot;.&quot;&#13;&#10;&#13;&#10;&amp; ToChar(13) &amp;&quot;Your extended price is &quot; &amp;ExtendedPrice &amp;&quot;.&quot;&#13;&#10;&#13;&#10;&amp; ToChar(13) &amp;&quot;With tax at .07 the tax you owe is &quot; &amp;Tax &amp;&quot;.&quot;&#13;&#10;&#13;&#10;&amp; ToChar(13) &amp;&quot;This brings your total to &quot; &amp;Total &amp;&quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

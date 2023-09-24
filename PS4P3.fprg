@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-24 04:09:16 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMjQ7MDM6MzM6MzkgUE07MjkxMw=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMjQ7MDQ6MDk6MTYgUE07MzszMDIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="HowManyBooksToOrder" type="Real" array="False" size=""/>
+            <declare name="CostPerBook" type="Real" array="False" size=""/>
+            <declare name="ShippingFee" type="Real" array="False" size=""/>
+            <declare name="OrderTotal" type="Real" array="False" size=""/>
+            <input variable="HowManyBooksToOrder"/>
+            <input variable="CostPerBook"/>
+            <assign variable="OrderTotal" expression="HowManyBooksToOrder * CostPerBook"/>
+            <if expression="Ordertotal &gt;= 50">
+                <then>
+                    <assign variable="ShippingFee" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="ShippingFee" expression="25"/>
+                </else>
+            </if>
+            <if expression="ShippingFee = 0">
+                <then>
+                    <output expression="&quot;Congradulations, by ordering 50 dollars or more you have avoided a shipping charge.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;You are only &quot; &amp;(50-OrderTotal) &amp;&quot; dollars away from free shipping.&quot; &#13;&#10;&#13;&#10;&amp;ToChar(13) &amp;&quot;You can avoid our 25 dollar shipping fee by getting your order to 50 dollars or more.&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Your order comes to a total of &quot; &amp;OrderTotal &amp; &quot; with an additional shipping fee of &quot; &amp;ShippingFee" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-24 03:33:35 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMjQ7MTI6MTA6NDUgQU07Mjg5MA=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMjQ7MDM6MzM6MzUgUE07MTU7MzA3MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="Item" type="String" array="False" size=""/>
+            <declare name="UnitPrice" type="Real" array="False" size=""/>
+            <declare name="ExtendedPrice" type="Real" array="False" size=""/>
+            <input variable="qty"/>
+            <input variable="Item"/>
+            <if expression="Item == &quot;A&quot;">
+                <then>
+                    <assign variable="UnitPrice" expression="10"/>
+                </then>
+                <else>
+                    <assign variable="UnitPrice" expression="20"/>
+                </else>
+            </if>
+            <assign variable="ExtendedPrice" expression="UnitPrice * qty"/>
+            <output expression="&quot;By ordering &quot; &amp;qty &amp;&quot; of the item that costs &quot; &amp;unitprice &amp;&quot;.&quot;&#13;&#10;&amp;ToChar(13) &amp;&quot;Your Extended Price is &quot; &amp;ExtendedPrice &amp;&quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
