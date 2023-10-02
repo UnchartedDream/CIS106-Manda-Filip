@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-27 10:33:16 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMjc7MTA6MDM6MzkgUE07MjkxMQ=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMDktMjc7MTA6MzM6MTYgUE07ODszMDI0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Qty" type="Real" array="False" size=""/>
+            <declare name="Price" type="Real" array="False" size=""/>
+            <declare name="ExtendedPrice" type="Real" array="False" size=""/>
+            <declare name="TaxAmount" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <input variable="Qty"/>
+            <if expression="Qty &gt; 10000">
+                <then>
+                    <assign variable="Price" expression="10"/>
+                </then>
+                <else>
+                    <if expression="Qty &gt;= 50000">
+                        <then>
+                            <assign variable="Price" expression="20"/>
+                        </then>
+                        <else>
+                            <assign variable="Price" expression="30"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="ExtendedPrice" expression="(Qty * Price)"/>
+            <assign variable="TaxAmount" expression="(ExtendedPrice * .07)"/>
+            <assign variable="Total" expression="ExtendedPrice + TaxAmount"/>
+            <output expression="&quot;Your Extended Price is &quot; &amp;ExtendedPrice &#13;&#10;&#13;&#10;&amp;ToChar(13) &amp;&quot;Your tax owed is &quot; &amp;TaxAmount&#13;&#10;&#13;&#10;&amp;ToChar(13) &amp;&quot;Your total cost comes to &quot; &amp;Total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

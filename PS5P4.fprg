@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 09:19:44 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDE7MDk6MDA6MTEgUE07Mjg5MA=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDE7MDk6MTk6NDQgUE07MTI7MzA2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NumOfTix" type="Real" array="False" size=""/>
+            <declare name="PricePerTix" type="Real" array="False" size=""/>
+            <declare name="TotalCost" type="Real" array="False" size=""/>
+            <input variable="NumOfTix"/>
+            <if expression="NumOfTix &gt;= 25">
+                <then>
+                    <assign variable="PricePerTix" expression="50"/>
+                </then>
+                <else>
+                    <if expression="NumOfTix &gt; 9">
+                        <then>
+                            <assign variable="PricePerTix" expression="60"/>
+                        </then>
+                        <else>
+                            <if expression="NumOfTix &gt; 5">
+                                <then>
+                                    <assign variable="PricePerTix" expression="70"/>
+                                </then>
+                                <else>
+                                    <assign variable="PricePerTix" expression="75"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="TotalCost" expression="NumOfTix * PricePerTix"/>
+            <output expression="&quot;Number of Tickets Purchased &quot; &amp;NumOfTix&#13;&#10;&amp;ToChar(13) &amp;&quot;Price Per Ticket is &quot; &amp;PricePerTix&#13;&#10;&amp;ToChar(13) &amp;&quot; Total Cost is &quot; &amp;TotalCost" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
