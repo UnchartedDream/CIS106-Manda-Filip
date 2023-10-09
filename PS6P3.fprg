@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 06:06:38 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDg7MDQ6MzI6MDEgUE07Mjg5Ng=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDg7MDY6MDY6MzggUE07MTM7MzA2OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="DoYouWishToRunThisProgram" type="String" array="False" size=""/>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="ExamScore1" type="Real" array="False" size=""/>
+            <declare name="ExamScore2" type="Real" array="False" size=""/>
+            <declare name="AverageScore" type="Real" array="False" size=""/>
+            <declare name="LoopRuns" type="Integer" array="False" size=""/>
+            <assign variable="LoopRuns" expression="0"/>
+            <output expression="&quot;Do you wish to run this program? Please enter Yes or No&quot;" newline="True"/>
+            <input variable="DoYouWishToRunThisProgram"/>
+            <while expression="DoYouWishToRunThisProgram == &quot;Yes&quot;">
+                <output expression="&quot;Please enter last name of the student&quot;" newline="True"/>
+                <input variable="LastName"/>
+                <output expression="&quot;Please enter Exam Score 1&quot;" newline="True"/>
+                <input variable="ExamScore1"/>
+                <output expression="&quot;Please enter Exam Score 2&quot;" newline="True"/>
+                <input variable="ExamScore2"/>
+                <assign variable="AverageScore" expression="(ExamScore1 + ExamScore2) / 2"/>
+                <output expression="&quot;Last Name of student is &quot; &amp;LastName" newline="True"/>
+                <output expression="&quot;Average Score of exams is &quot; &amp;AverageScore" newline="True"/>
+                <assign variable="LoopRuns" expression="LoopRuns + 1"/>
+                <output expression="LoopRuns &amp;&quot; student(s) have entered data&quot;" newline="True"/>
+                <output expression="&quot;Do you wish to run this program again? Please enter Yes or No&quot;" newline="True"/>
+                <input variable="DoYouWishToRunThisProgram"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

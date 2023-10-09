@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 06:27:15 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDY7MDU6NDU6NDAgUE07MjkwMg=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDg7MDY6Mjc6MTUgUE07MTc7MzA3MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="StartValue" type="Real" array="False" size=""/>
+            <declare name="StopValue" type="Real" array="False" size=""/>
+            <declare name="IncrementValue" type="Real" array="False" size=""/>
+            <input variable="StartValue"/>
+            <input variable="StopValue"/>
+            <input variable="IncrementValue"/>
+            <output expression="&quot;Start Value is: &quot; &amp;StartValue" newline="True"/>
+            <output expression="&quot;Stop Value is: &quot; &amp;StopValue" newline="True"/>
+            <while expression="StartValue &lt;= StopValue">
+                <assign variable="StartValue" expression="StartValue + IncrementValue"/>
+                <output expression="&quot;Increment Value has been added ot the Start Value which equals: &quot; &amp; StartValue&#13;&#10;&amp;ToChar(13) &amp;&quot;Since the Value plus Incrament Value does not equal the Stop Value we will add the Increment Value again.&quot;" newline="True"/>
+            </while>
+            <output expression="&quot;The Value now equals the Stop Value &quot; &amp;StopValue" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

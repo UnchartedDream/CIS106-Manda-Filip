@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 09:10:02 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDg7MDg6NTE6MDEgUE07MjkwMQ=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDg7MDg6NTU6MDkgUE07NjtNYW5keTtERVNLVE9QLU9SVFJCS0Y7MjAyMy0xMC0wODswNDozMjowMSBQTTtQUzZQMy5mcHJnOzY4NjU="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDg7MDk6MTA6MDIgUE07NTszMDEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="DoYouWishToRunThisProgram" type="String" array="False" size=""/>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="HoursWorked" type="Real" array="False" size=""/>
+            <declare name="RateOfPay" type="Real" array="False" size=""/>
+            <declare name="OverTime" type="Real" array="False" size=""/>
+            <declare name="GrossPay" type="Real" array="False" size=""/>
+            <declare name="LoopRuns" type="Real" array="False" size=""/>
+            <assign variable="LoopRuns" expression="0"/>
+            <output expression="&quot;Do you wish to run this program? Please enter Yes or No&quot;" newline="True"/>
+            <input variable="DoYouWishToRunThisProgram"/>
+            <while expression="DoYouWishToRunThisProgram == &quot;Yes&quot;">
+                <output expression="&quot;Please enter last name of the employee&quot;" newline="True"/>
+                <input variable="LastName"/>
+                <output expression="&quot;Hours worked&quot;" newline="True"/>
+                <input variable="HoursWorked"/>
+                <output expression="&quot;Please enter Rate of Pay&quot;" newline="True"/>
+                <input variable="RateOfPay"/>
+                <if expression="HoursWorked &gt; 40">
+                    <then>
+                        <assign variable="OverTime" expression="(HoursWorked - 40) * (RateOfPay *.5)"/>
+                    </then>
+                    <else>
+                        <assign variable="OverTime" expression="0"/>
+                    </else>
+                </if>
+                <assign variable="GrossPay" expression="(RateOfPay * HoursWorked) + OverTime"/>
+                <output expression="&quot;Last Name of employee is &quot; &amp;LastName" newline="True"/>
+                <output expression="&quot;Gross Pay for &quot; &amp;LastName &amp;&quot; is &quot; &amp;GrossPay" newline="True"/>
+                <assign variable="LoopRuns" expression="LoopRuns + 1"/>
+                <output expression="LoopRuns &amp;&quot; number of employees&quot;" newline="True"/>
+                <output expression="&quot;Do you wish to run this program again? Please enter Yes or No&quot;" newline="True"/>
+                <input variable="DoYouWishToRunThisProgram"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

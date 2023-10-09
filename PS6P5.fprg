@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mandy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 10:44:59 PM"/>
+        <attribute name="created" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDg7MDk6NTg6MzMgUE07MjkxNA=="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDg7MTA6MDk6MTAgUE07NDtNYW5keTtERVNLVE9QLU9SVFJCS0Y7MjAyMy0xMC0wODswNDozMjowMSBQTTtQUzZQMy5mcHJnOzY4NDc="/>
+        <attribute name="edited" value="TWFuZHk7REVTS1RPUC1PUlRSQktGOzIwMjMtMTAtMDg7MTA6NDQ6NTkgUE07MTI7MzA2Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="DoYouWishToRunThisProgram" type="String" array="False" size=""/>
+            <declare name="Price" type="Real" array="False" size=""/>
+            <declare name="Qty" type="Real" array="False" size=""/>
+            <declare name="SumOfAllDiscounts" type="Real" array="False" size=""/>
+            <declare name="ExtPrice" type="Real" array="False" size=""/>
+            <declare name="Discount" type="Real" array="False" size=""/>
+            <declare name="DiscountAmount" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <assign variable="SumOfAllDiscounts" expression="0"/>
+            <output expression="&quot;Do you wish to Continue? Please enter Yes or No&quot;" newline="True"/>
+            <input variable="DoYouWishToRunThisProgram"/>
+            <while expression="DoYouWishToRunThisProgram == &quot;Yes&quot;">
+                <output expression="&quot;Please enter price of item&quot;" newline="True"/>
+                <input variable="Price"/>
+                <output expression="&quot;Please enter quantity&quot;" newline="True"/>
+                <input variable="Qty"/>
+                <assign variable="ExtPrice" expression="Qty*Price"/>
+                <if expression="ExtPrice &gt; 10000">
+                    <then>
+                        <assign variable="Discount" expression=".25"/>
+                    </then>
+                    <else>
+                        <assign variable="Discount" expression=".10"/>
+                    </else>
+                </if>
+                <assign variable="DiscountAmount" expression="ExtPrice * Discount"/>
+                <assign variable="SumOfAllDiscounts" expression="DiscountAmount + SumOfAllDiscounts"/>
+                <assign variable="Total" expression="ExtPrice - DiscountAmount"/>
+                <output expression="&quot;Extended Price is &quot; &amp;ExtPrice&#13;&#10;&amp;ToChar(13) &amp;&quot;Discount on this purchase is &quot; &amp;DiscountAmount&#13;&#10;&amp;ToChar(13) &amp;&quot;Total for this order is &quot; &amp;Total" newline="True"/>
+                <output expression="&quot;Do you wish to continue? Please enter Yes or No&quot;" newline="True"/>
+                <input variable="DoYouWishToRunThisProgram"/>
+            </while>
+            <output expression="&quot;Total Discounts on all orders made is &quot; &amp;SumOfAllDiscounts" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
