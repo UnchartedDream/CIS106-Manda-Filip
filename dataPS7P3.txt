@@ -1,0 +1,10 @@
+Tomson
+50000.00
+Smith
+60000.00
+Brown
+70000.00
+Wilson
+80000.00
+Taylor
+85000.00

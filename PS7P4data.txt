@@ -1,0 +1,15 @@
+Pen
+100
+1
+Backpack
+10
+20
+Notebook
+30
+3
+NotePad
+20
+2
+Printer
+100
+50
