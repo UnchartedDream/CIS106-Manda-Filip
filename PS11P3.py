@@ -24,8 +24,8 @@ def hilow(name, score):
       lowindex = y
       lowscore = score[y]
       print("")
-  print("highest salary", name [hiindex], score [hiindex])
-  print("lowest salary", name[lowindex], score [lowindex])
+  print("highest score", name [hiindex], score [hiindex])
+  print("lowest score", name[lowindex], score [lowindex])
 
 #open file
 f = open("lnameP3.txt", "r")
